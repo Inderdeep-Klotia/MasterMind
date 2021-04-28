@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require_relative 'secret_code_generator'
-require_relative 'game_text'
-require_relative 'clue_circles'
+require_relative '../Text & Interface/game_text'
+require_relative '../Text & Interface/clue_circles'
 
 # This module is responsible for housing the methods involved with codebreaking when the user is playing against the
 # computer

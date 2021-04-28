@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'instructions'
-require_relative 'game_parameters'
-require_relative 'game_logic_codebreak_user'
+require_relative 'Text & Interface/instructions'
+require_relative 'Logic/game_parameters'
+require_relative 'Logic/game_logic_codebreak_user'
 
 # This class is responsible for starting & running the game.
 class RunGame
