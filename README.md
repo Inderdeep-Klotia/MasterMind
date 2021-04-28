@@ -1,4 +1,4 @@
 # MasterMind
 MasterMind the Game
 
-Temporary Readme file.
+Added verified key:
