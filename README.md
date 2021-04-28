@@ -1,4 +1,4 @@
 # MasterMind
 MasterMind the Game
 
-Added verified key:
+Checking if key is working correctly.
