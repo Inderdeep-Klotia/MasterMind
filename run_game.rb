@@ -21,15 +21,29 @@ class RunGame
       # Ask User: Play as the CodeBreaker or CodeMaker?
       selection = break_or_make?
       # Note the run_game method here is for the user playing against the AI as a Code Breaker
-      selection == '2' ? run_game : 'Still need to create section'
+      selection == '2' ? run_codebreak_user : 'Still need to create section'
 
     else
       puts 'If not single player, then multiplayer. Need to finish section.'
     end
 
+    # Ask if the user wants to play again:
+    play_again?
   end
 
+  # This method asks if the user wants to play again. If so restart the entire game.
+  def play_again?
+    puts "\n\n"
+    puts 'Would you like to play again? Y to play again, any key to quit.'
+    response = gets.chomp!.upcase
 
-
+    if response == 'Y'
+      puts "\n\n\n\n\n"
+      RunGame.new.begin
+    else
+      puts "\n\n"
+      puts 'Thank you for playing. Come again!'
+    end
+  end
 
 end

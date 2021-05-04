@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'secret_code_generator'
+require_relative 'check_for_win'
 require_relative '../Text & Interface/game_text'
 require_relative '../Text & Interface/clue_circles'
 
@@ -10,12 +11,11 @@ module GameLogicCodeBreakUser
   include SecretCodeGenerator
   include GameText
   include ClueCircles
+  include CheckForWin
 
-  def run_game
+  def run_codebreak_user
     # Call the appropriate method to house the computer's secret code,
     secret_code = generate_code
-    secret_code = secret_code.reverse
-    puts "secret_code is #{secret_code}"
 
     # Variable to house the turn number.
     turn = 1
@@ -29,6 +29,12 @@ module GameLogicCodeBreakUser
       # Call the function responsible for displaying the remainder of the game text [Second half of the turn]:
       codebreaker_text_end(user_guess, clue_arr)
 
+      # Check if the user has won the game:
+      if check_win(secret_code, user_guess)
+        puts "You've broke the code! Congratulations!"
+        break
+      end
+
       turn += 1
     end
 
@@ -41,6 +47,7 @@ module GameLogicCodeBreakUser
   def check_guess(secret_code, user_guess)
     # Array to house all exact matches:
     arr_exact = check_exact(secret_code, user_guess)
+    # Array to house all of the generic matches:
     arr_general = check_generic(secret_code, user_guess)
 
     # Subtract the total number of general occurrences by the number of exact occurrences
@@ -83,5 +90,4 @@ module GameLogicCodeBreakUser
 
     arr_general
   end
-
 end
