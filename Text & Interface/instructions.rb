@@ -57,11 +57,14 @@ module Instructions
 
       ------------------------------------------------------------------------------------------------------------------
       #{Rainbow("Examples of Clues:").underline.bright}
-      If the CodeMaker created the abovementioned secret code '5435', the guess '5513' would create the following clues:
+      If the CodeMaker created the secret code '5435', the guess '5513' would create the following clues:
 
       #{code_box_color(5)} #{code_box_color(5)} #{code_box_color(1)} #{code_box_color(3)}\
          #{clue('Y')} #{clue('x')} #{clue('x')}
 
+      If you guessed '5111' you would get the following clues. Notice that you still get two clues for 5.
+      #{code_box_color(5)} #{code_box_color(1)} #{code_box_color(1)} #{code_box_color(1)}\
+         #{clue('Y')} #{clue('x')}
       ------------------------------------------------------------------------------------------------------------------
     HEREDOC
   end
