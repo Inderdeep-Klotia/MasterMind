@@ -1,4 +1,5 @@
 # MasterMind
 MasterMind the Game
 
-Checking if key is working correctly. I believe it is.
+Making the key work correctly with IntelliJ.
+Current Status should be verified.
