@@ -63,4 +63,48 @@ module GameText
     clue_display_arr.join(' ')
   end
 
+
+
+  # Methods here will now assist in displaying text for the AI playing as the CodeBreaker and the user playing as the
+  # CodeMaker:
+
+  # Obtain the secret code from the user:
+  def user_secret_code(turn)
+    puts <<~HEREDOC
+
+      ==================================================================================================================
+                                                           #{Rainbow("Turn #: #{turn}").teal}
+
+      Please enter a 4 digit secret code that includes digits from 1 to 6.
+    HEREDOC
+
+    # Obtain the input from the user:
+    input = gets.chomp!
+    input = verify_input(input)
+    input = input.to_i.digits.reverse
+
+    # Display the secret key:
+    puts "\nYour Secret Key:\n"
+    puts "#{code_box_color(input[0])} #{code_box_color(input[1])} #{code_box_color(input[2])} "\
+         "#{code_box_color(input[3])}"
+
+    puts <<~HEREDOC
+      ==================================================================================================================
+    HEREDOC
+
+    # return input:
+    input
+  end
+
+
+  def codemaker_text(turn)
+    puts <<~HEREDOC
+
+      ==================================================================================================================
+                                                           #{Rainbow("Turn #: #{turn}").teal}
+
+      The Computer's Guess is displayed below:
+    HEREDOC
+  end
+
 end
