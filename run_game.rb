@@ -3,6 +3,7 @@
 require_relative 'Text & Interface/instructions'
 require_relative 'Logic/game_parameters'
 require_relative 'Logic/game_logic_codebreak_user'
+require_relative 'Logic/game_logic_codebreak_ai'
 
 # This class is responsible for starting & running the game.
 class RunGame
@@ -10,6 +11,7 @@ class RunGame
   include Instructions
   include GameParameters
   include GameLogicCodeBreakUser
+  include GameLogicCodebreakAI
 
   # Method responsible for starting the game.
   def begin
@@ -20,8 +22,8 @@ class RunGame
     if single_player?
       # Ask User: Play as the CodeBreaker or CodeMaker?
       selection = break_or_make?
-      # Note the run_game method here is for the user playing against the AI as a Code Breaker
-      selection == '2' ? run_codebreak_user : 'Still need to create section'
+      # Have the user or the AI break the code based on the user input.
+      selection == '2' ? run_codebreak_user : run_codebreak_AI
 
     else
       puts 'If not single player, then multiplayer. Need to finish section.'
