@@ -5,8 +5,8 @@ require_relative 'check_for_win'
 require_relative '../Text & Interface/game_text'
 require_relative '../Text & Interface/clue_circles'
 
-# This module is responsible for housing the methods involved with break the code when the user is playing against the
-# computer
+# This module is responsible for housing the methods involved with breaking the code when the user is playing as the
+# code breaker against the AI.
 module GameLogicCodeBreakUser
   include SecretCodeGenerator
   include GameText
