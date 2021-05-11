@@ -29,7 +29,7 @@ module GameText
 
   # Method to check the input that the user has given:
   def verify_input(input)
-    until /[1-6]{4}/.match(input.to_s)
+    until /[1-6]{4}/.match(input.to_s) && input.length == 4
       puts 'Please enter a valid secret code combination. 4 integers with each integer ranging from 1-6:'.red
       input = gets.chomp!
     end
@@ -96,14 +96,38 @@ module GameText
     input
   end
 
-
-  def codemaker_text(turn)
+  # Displays ai turn text
+  def ai_turn_text(turn)
     puts <<~HEREDOC
 
       ==================================================================================================================
                                                            #{Rainbow("Turn #: #{turn}").teal}
 
       The Computer's Guess is displayed below:
+    HEREDOC
+  end
+
+  # Display ai end turn text
+  def ai_turn_end(guess, clues)
+    str = "#{code_box_color(guess[0])} #{code_box_color(guess[1])} #{code_box_color(guess[2])} "\
+          "#{code_box_color(guess[3])}"
+
+    # Obtain clues in displayable format:
+    display_clues = convert_clues(clues)
+    puts <<~HEREDOC
+      #{str} #{display_clues}
+      ==================================================================================================================
+    HEREDOC
+  end
+
+  # Method displays that the AI won the game.
+  def ai_won_game(secret_code, guess, turn)
+    puts <<~HEREDOC
+      ==================================================================================================================
+      The AI cracked the code!
+      Secret Code: #{secret_code}
+      Winning Guess: #{guess}
+      Number of Turns it took to Win: #{turn}
     HEREDOC
   end
 
