@@ -15,7 +15,6 @@ module GameLogicCodebreakAI
 
 
 
-
   end
 
 end
