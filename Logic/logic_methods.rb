@@ -55,10 +55,13 @@ module LogicMethods
           arr_general.push('X')
         end
       else
-        arr_general.push('X')
+        occurrences_secret.times do
+          arr_general.push('X')
+        end
       end
     end
 
     arr_general
   end
+
 end
