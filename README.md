@@ -1,5 +1,12 @@
-# MasterMind
-MasterMind the Game
+      ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗██████╗
+      ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗
+      ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║██║  ██║
+      ██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██║  ██║
+      ██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██████╔╝
+      ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝
+#### MasterMind the Game
+#### Author: Inderdeep Klotia
+#### AI Implementation:
+Implemented a partial minimax function that wins games with an average of 5 guesses.
 
-Making the key work correctly with IntelliJ.
-Current Status should be verified.
+![ScreenShot](https://raw.github.com/Inderdeep-Klotia/MasterMind/main/GameScreenshot.png)
