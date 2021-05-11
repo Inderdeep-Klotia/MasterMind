@@ -18,15 +18,26 @@ module Instructions
   def starting_game_instructions
     # Define a very long string to display all the user instructions in one go.
 
+    game_banner = "
+              ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗██████╗
+              ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗
+              ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║██║  ██║
+              ██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██║  ██║
+              ██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██████╔╝
+              ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝
+               "
+
+
+
     str = <<~HEREDOC
 
       ==================================================================================================================
                                                     MASTERMIND GAME
+                                                         #{game_banner}     
+                                                   INDERDEEP KLOTIA        
       ==================================================================================================================
-
       #{Rainbow("Welcome to MasterMind!").underline.bright}
-      This version of Mastermind is a single or multiplayer game where the user will play against the computer or 
-      another player. 
+      This version of Mastermind is a single game where the user will play against the computer. 
       
       #{Rainbow("How to play:").underline.bright}
       There will be a choice of 6 different numbers [pegs] from 1 - 6. 
@@ -36,8 +47,7 @@ module Instructions
       #{code_box_color(10)}
 
       You can either be the #{Rainbow("CodeMaker").underline.red} or the #{Rainbow("CodeBreaker").underline.red}
-      The CodeMaker will create a secret code of 4 pegs and the CodeBreaker has to try to decode it in a certain number
-      of turns.
+      The CodeMaker will create a secret code of 4 pegs and the CodeBreaker must decode it within 12 turns.
 
       ------------------------------------------------------------------------------------------------------------------
       #{Rainbow("Creating the Code:").underline.bright}
@@ -49,7 +59,7 @@ module Instructions
       
       ------------------------------------------------------------------------------------------------------------------
       #{Rainbow("Receiving Clues:").underline.bright}
-      For the CodeBreaker to win, they must guess the code within 12 turns. Every guess comes with clues.
+      Every guess comes with clues.
       
       #{clue('Y')} This clue means that the CodeBreaker has a correct peg in the correct location 
       
@@ -57,14 +67,15 @@ module Instructions
 
       ------------------------------------------------------------------------------------------------------------------
       #{Rainbow("Examples of Clues:").underline.bright}
-      If the CodeMaker created the secret code '5435', the guess '5513' would create the following clues:
+      If the CodeMaker created the secret code '5435', the guess '5513' would produce the following clues:
 
       #{code_box_color(5)} #{code_box_color(5)} #{code_box_color(1)} #{code_box_color(3)}\
          #{clue('Y')} #{clue('x')} #{clue('x')}
 
-      If you guessed '5111' you would get the following clues. Notice that you still get two clues for 5.
-      #{code_box_color(5)} #{code_box_color(1)} #{code_box_color(1)} #{code_box_color(1)}\
-         #{clue('Y')} #{clue('x')}
+      The secret code '5435' with the guess of '1235' would produce the following clues:
+      #{code_box_color(1)} #{code_box_color(2)} #{code_box_color(3)} #{code_box_color(5)}\
+         #{clue('Y')} #{clue('Y')}
+
       ------------------------------------------------------------------------------------------------------------------
     HEREDOC
   end
