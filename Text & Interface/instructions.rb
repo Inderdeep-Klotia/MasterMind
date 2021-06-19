@@ -33,7 +33,7 @@ module Instructions
 
       #{Rainbow("==================================================================================================================").darkorange}
                                                     #{Rainbow("MASTERMIND GAME").darkorange}
-                                                         #{Rainbow(game_banner).darkorchid}     
+                                                         #{Rainbow(game_banner).darkgreen}     
                                                     #{Rainbow("INDERDEEP KLOTIA").darkorange}
       #{Rainbow("==================================================================================================================").darkorange}
       #{Rainbow("Welcome to MasterMind!").underline.dodgerblue}
