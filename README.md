@@ -7,7 +7,7 @@
 #### MasterMind the Game [Made With Ruby]
 #### Author: Inderdeep Klotia
 
-###General Information
+### General Information
 #### AI Implementation:
 Implemented a partial minimax function that wins games with an average of 5 guesses.
 
