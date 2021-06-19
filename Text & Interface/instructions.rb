@@ -33,7 +33,7 @@ module Instructions
 
       #{Rainbow("==================================================================================================================").darkorange}
                                                     #{Rainbow("MASTERMIND GAME").darkorange}
-                                                         #{Rainbow(game_banner).red}     
+                                                         #{Rainbow(game_banner).darkred}     
                                                     #{Rainbow("INDERDEEP KLOTIA").darkorange}
       #{Rainbow("==================================================================================================================").darkorange}
       #{Rainbow("Welcome to MasterMind!").underline.dodgerblue}
@@ -46,10 +46,10 @@ module Instructions
       #{Rainbow("Your options are displayed here:").darkorange}
       #{code_box_color(10)}
 
-      #{Rainbow("You can either be the ").darkorange}#{Rainbow("CodeMaker").underline.red}#{Rainbow(" or the ").darkorange}#{Rainbow("CodeBreaker").underline.red}
+      #{Rainbow("You can either be the ").darkorange}#{Rainbow("CodeMaker").underline.darkred}#{Rainbow(" or the ").darkorange}#{Rainbow("CodeBreaker").underline.darkred}
       #{Rainbow("The CodeMaker will create a secret code of 4 pegs and the CodeBreaker must decode it within 12 turns.").darkorange}
 
-      ------------------------------------------------------------------------------------------------------------------
+      #{Rainbow("------------------------------------------------------------------------------------------------------------------").darkorange}
       #{Rainbow("Creating the Code:").underline.dodgerblue}
       #{Rainbow("Here's an example of 4 pegs that a CodeMaker could create:").darkorange}      
       #{code_box_color(1)} #{code_box_color(4)} #{code_box_color( 3)} #{code_box_color(2)}
@@ -57,7 +57,7 @@ module Instructions
       #{Rainbow("If you desire you can also add two of the same 'codes' in the set:").darkorange}
       #{code_box_color(5)} #{code_box_color(4)} #{code_box_color( 3)} #{code_box_color(5)}
       
-      ------------------------------------------------------------------------------------------------------------------
+      #{Rainbow("------------------------------------------------------------------------------------------------------------------").darkorange}
       #{Rainbow("Receiving Clues:").underline.dodgerblue}
       #{Rainbow("Every guess comes with clues.").darkorange}
       
@@ -65,7 +65,7 @@ module Instructions
       
       #{clue('x')} #{Rainbow("This clue means that the Codebreaker has a correct peg in the wrong location. ").darkorange}
 
-      ------------------------------------------------------------------------------------------------------------------
+      #{Rainbow("------------------------------------------------------------------------------------------------------------------").darkorange}
       #{Rainbow("Examples of Clues:").underline.dodgerblue}
       #{Rainbow("If the CodeMaker created the secret code '5435', the guess '5513' would produce the following clues:").darkorange}
 
@@ -76,7 +76,7 @@ module Instructions
       #{code_box_color(1)} #{code_box_color(2)} #{code_box_color(3)} #{code_box_color(5)}\
          #{clue('Y')} #{clue('Y')}
 
-      ------------------------------------------------------------------------------------------------------------------
+      #{Rainbow("------------------------------------------------------------------------------------------------------------------").darkorange}
     HEREDOC
   end
 end
