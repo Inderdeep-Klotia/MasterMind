@@ -25,7 +25,7 @@ The AI will break the code that the user creates within approximately 5 turns.
 
 ===============================================================
 ## Live Demo Link:
-Will be updating shortly.
+https://replit.com/@InderdeepKlotia/MasterMind
 
 ===============================================================
 ## Getting Started
