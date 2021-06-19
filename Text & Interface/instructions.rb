@@ -31,48 +31,48 @@ module Instructions
 
     str = <<~HEREDOC
 
-      ==================================================================================================================
-                                                    MASTERMIND GAME
-                                                         #{game_banner}     
-                                                   INDERDEEP KLOTIA        
-      ==================================================================================================================
-      #{Rainbow("Welcome to MasterMind!").underline.bright}
-      This version of Mastermind is a single game where the user will play against the computer. 
+      #{Rainbow("==================================================================================================================").darkorange}
+                                                    #{Rainbow("MASTERMIND GAME").darkorange}
+                                                         #{Rainbow(game_banner).red}     
+                                                    #{Rainbow("INDERDEEP KLOTIA").darkorange}
+      #{Rainbow("==================================================================================================================").darkorange}
+      #{Rainbow("Welcome to MasterMind!").underline.dodgerblue}
+      #{Rainbow("This version of Mastermind is a single game where the user will play against the computer. ").darkorange}
       
-      #{Rainbow("How to play:").underline.bright}
-      There will be a choice of 6 different numbers [pegs] from 1 - 6. 
-      Each choice will be represented with a specific color as shown below.
+      #{Rainbow("How to play:").underline.dodgerblue}
+      #{Rainbow("There will be a choice of 6 different numbers [pegs] from 1 - 6.").darkorange}
+      #{Rainbow("Each choice will be represented with a specific color as shown below.").darkorange}
       
-      Your options are displayed here:
+      #{Rainbow("Your options are displayed here:").darkorange}
       #{code_box_color(10)}
 
-      You can either be the #{Rainbow("CodeMaker").underline.red} or the #{Rainbow("CodeBreaker").underline.red}
-      The CodeMaker will create a secret code of 4 pegs and the CodeBreaker must decode it within 12 turns.
+      #{Rainbow("You can either be the ").darkorange}#{Rainbow("CodeMaker").underline.red}#{Rainbow(" or the ").darkorange}#{Rainbow("CodeBreaker").underline.red}
+      #{Rainbow("The CodeMaker will create a secret code of 4 pegs and the CodeBreaker must decode it within 12 turns.").darkorange}
 
       ------------------------------------------------------------------------------------------------------------------
-      #{Rainbow("Creating the Code:").underline.bright}
-      Here's an example of 4 pegs that a CodeMaker could create:
+      #{Rainbow("Creating the Code:").underline.dodgerblue}
+      #{Rainbow("Here's an example of 4 pegs that a CodeMaker could create:").darkorange}      
       #{code_box_color(1)} #{code_box_color(4)} #{code_box_color( 3)} #{code_box_color(2)}
     
-      If you desire you can also add two of the same 'codes' in the set:
+      #{Rainbow("If you desire you can also add two of the same 'codes' in the set:").darkorange}
       #{code_box_color(5)} #{code_box_color(4)} #{code_box_color( 3)} #{code_box_color(5)}
       
       ------------------------------------------------------------------------------------------------------------------
-      #{Rainbow("Receiving Clues:").underline.bright}
-      Every guess comes with clues.
+      #{Rainbow("Receiving Clues:").underline.dodgerblue}
+      #{Rainbow("Every guess comes with clues.").darkorange}
       
-      #{clue('Y')} This clue means that the CodeBreaker has a correct peg in the correct location 
+      #{clue('Y')} #{Rainbow("This clue means that the CodeBreaker has a correct peg in the correct location ").darkorange}
       
-      #{clue('x')} This clue means that the Codebreaker has a correct peg in the wrong location.
+      #{clue('x')} #{Rainbow("This clue means that the Codebreaker has a correct peg in the wrong location. ").darkorange}
 
       ------------------------------------------------------------------------------------------------------------------
-      #{Rainbow("Examples of Clues:").underline.bright}
-      If the CodeMaker created the secret code '5435', the guess '5513' would produce the following clues:
+      #{Rainbow("Examples of Clues:").underline.dodgerblue}
+      #{Rainbow("If the CodeMaker created the secret code '5435', the guess '5513' would produce the following clues:").darkorange}
 
       #{code_box_color(5)} #{code_box_color(5)} #{code_box_color(1)} #{code_box_color(3)}\
          #{clue('Y')} #{clue('x')} #{clue('x')}
 
-      The secret code '5435' with the guess of '1235' would produce the following clues:
+      #{Rainbow("The secret code '5435' with the guess of '1235' would produce the following clues:").darkorange}
       #{code_box_color(1)} #{code_box_color(2)} #{code_box_color(3)} #{code_box_color(5)}\
          #{clue('Y')} #{clue('Y')}
 

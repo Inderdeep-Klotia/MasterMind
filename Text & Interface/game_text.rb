@@ -47,7 +47,7 @@ module GameText
 
     puts <<~HEREDOC
       #{str} #{display_clues}
-      ==================================================================================================================
+      #{Rainbow("==================================================================================================================").darkorange}
     HEREDOC
   end
 
@@ -72,10 +72,10 @@ module GameText
   def user_secret_code(turn)
     puts <<~HEREDOC
 
-      ==================================================================================================================
+      #{Rainbow("==================================================================================================================").darkorange}
                                                            #{Rainbow("Turn #: #{turn}").teal}
 
-      Please enter a 4 digit secret code that includes digits from 1 to 6.
+      #{Rainbow("Please enter a 4 digit secret code that includes digits from 1 to 6.").darkorange}
     HEREDOC
 
     # Obtain the input from the user:
@@ -84,12 +84,12 @@ module GameText
     input = input.to_i.digits.reverse
 
     # Display the secret key:
-    puts "\nYour Secret Key:\n"
+    puts "\n#{Rainbow("Your Secret Key:").darkorange}\n"
     puts "#{code_box_color(input[0])} #{code_box_color(input[1])} #{code_box_color(input[2])} "\
          "#{code_box_color(input[3])}"
 
     puts <<~HEREDOC
-      ==================================================================================================================
+      #{Rainbow("==================================================================================================================").darkorange}
     HEREDOC
 
     # return input:
@@ -100,10 +100,10 @@ module GameText
   def ai_turn_text(turn)
     puts <<~HEREDOC
 
-      ==================================================================================================================
+      #{Rainbow("==================================================================================================================").darkorange}
                                                            #{Rainbow("Turn #: #{turn}").teal}
 
-      The Computer's Guess is displayed below:
+      #{Rainbow("The Computer's Guess is displayed below:").darkorange}
     HEREDOC
   end
 
@@ -116,18 +116,18 @@ module GameText
     display_clues = convert_clues(clues)
     puts <<~HEREDOC
       #{str} #{display_clues}
-      ==================================================================================================================
+      #{Rainbow("==================================================================================================================").darkorange}
     HEREDOC
   end
 
   # Method displays that the AI won the game.
   def ai_won_game(secret_code, guess, turn)
     puts <<~HEREDOC
-      ==================================================================================================================
-      The AI cracked the code!
-      Secret Code: #{secret_code}
-      Winning Guess: #{guess}
-      Number of Turns it took to Win: #{turn}
+      #{Rainbow("==================================================================================================================").darkorange}
+      #{Rainbow("The AI cracked the code!").dodgerblue}
+      #{Rainbow("Secret Code: #{secret_code}").darkorange}
+      #{Rainbow("Winning Guess: #{guess}").darkorange}
+      #{Rainbow("Number of Turns it took to Win: #{turn}").darkorange}
     HEREDOC
   end
 

@@ -22,13 +22,13 @@ module GameParameters
   # Ask User: Play as the CodeBreaker or CodeMaker?
   def break_or_make?
     puts <<~HEREDOC
-      #{Rainbow("Begin the Game:").underline.bright}
-      Would you like to play as the CodeMaker--1 or CodeBreaker--2? Input 1 or 2
+      #{Rainbow("Begin the Game:").underline.dodgerblue}
+      #{Rainbow("Would you like to play as the CodeMaker--1 or CodeBreaker--2? Input 1 or 2").darkorange}
     HEREDOC
 
     ans = gets.chomp!
     while ans != '1' && ans != '2'
-      puts 'Please enter a valid response: 1 for CodeMaker, 2 for CodeBreaker'
+      puts "#{Rainbow("Please enter a valid response: 1 for CodeMaker, 2 for CodeBreaker").darkorange}"
       ans = gets.chomp!
     end
 

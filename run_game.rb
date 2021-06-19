@@ -5,6 +5,11 @@ require_relative 'Logic/game_parameters'
 require_relative 'Logic/game_logic_codebreak_user'
 require_relative 'Logic/game_logic_codebreak_ai'
 
+# Requires the Rainbow ruby gem
+require 'rainbow'
+Rainbow.enabled = true
+
+
 # This class is responsible for starting & running the game.
 class RunGame
   # Include the game_instructions module. Used to display instructions at the start of the game.
@@ -30,7 +35,7 @@ class RunGame
   # This method asks if the user wants to play again. If so restart the entire game.
   def play_again?
     puts "\n\n"
-    puts 'Would you like to play again? Y to play again, any key to quit.'
+    puts "#{Rainbow("Would you like to play again? Y to play again, any key to quit.").darkorange}"
     response = gets.chomp!.upcase
 
     if response == 'Y'
@@ -38,7 +43,7 @@ class RunGame
       RunGame.new.begin
     else
       puts "\n\n"
-      puts 'Thank you for playing. Come again!'
+      puts "#{Rainbow("Thank you for playing. Come again!").darkorange}"
     end
   end
 
