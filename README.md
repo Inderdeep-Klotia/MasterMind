@@ -21,7 +21,7 @@ The AI will break the code that the user creates within approximately 5 turns.
 ===============================================================
 
 #### Screenshot of Starting Screen:
-<img width="1266" alt="GameScreenshot" src="https://user-images.githubusercontent.com/68567294/117888837-a2b10400-b280-11eb-8dc1-0e451366b627.png">
+<img width="1266" alt="GameScreenshot" src="<img width="919" alt="GameScreenshot" src="https://user-images.githubusercontent.com/68567294/122655937-6fd21980-d124-11eb-83a1-e8f0c212da94.png">">
 
 ===============================================================
 ## Live Demo Link:
