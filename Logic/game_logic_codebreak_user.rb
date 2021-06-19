@@ -31,7 +31,7 @@ module GameLogicCodeBreakUser
 
       # Check if the user has won the game:
       if check_win(secret_code, user_guess)
-        puts "You've broke the code! Congratulations!"
+        puts "#{Rainbow("You've broke the code! Congratulations!").darkorange}"
         break
       end
 

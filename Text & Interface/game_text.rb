@@ -13,10 +13,10 @@ module GameText
   def codebreaker_text(turn)
     puts <<~HEREDOC
 
-      ==================================================================================================================
+      #{Rainbow("==================================================================================================================").darkorange}
                                                            #{Rainbow("Turn #: #{turn}").teal}
 
-      Type in 4 numbers from 1 - 6 to guess the secret code.
+      #{Rainbow("Type in 4 numbers from 1 - 6 to guess the secret code.").darkorange}
     HEREDOC
 
     # Obtain the input from the user:
