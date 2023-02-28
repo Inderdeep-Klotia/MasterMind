@@ -49,7 +49,7 @@ module Instructions
       #{Rainbow("You can either be the ").darkorange}#{Rainbow("CodeMaker").underline.darkred}#{Rainbow(" or the ").darkorange}#{Rainbow("CodeBreaker").underline.darkred}
       #{Rainbow("The CodeMaker will create a secret code of 4 pegs and the CodeBreaker must decode it within 12 turns.").darkorange}
 
-      #{Rainbow("------------------------------------------------------------).darkorange}
+      #{Rainbow("------------------------------------------------------------").darkorange}
       #{Rainbow("Creating the Code:").underline.dodgerblue}
       #{Rainbow("Here's an example of 4 pegs that a CodeMaker could create:").darkorange}      
       #{code_box_color(1)} #{code_box_color(4)} #{code_box_color( 3)} #{code_box_color(2)}
