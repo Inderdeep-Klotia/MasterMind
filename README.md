@@ -24,5 +24,5 @@ Game made utilizing Ruby
 
 [How to Run]
 ------------------------------------------------------------
-Replit Link: https://replit.com/@InderdeepKlotia/MasterMind
+Replit Link: https://replit.com/@Inderdeepkloti1/MasterMind
 
